@@ -58,6 +58,16 @@
 				draw();
 			})
 
+			window.addEventListener('touchmove', function(e){
+				const rect = c.getBoundingClientRect();
+				console.log(rect);
+				x=e.pageX - rect.left;
+				y=e.pageY - rect.top;
+				console.log(x);
+				console.log(y);
+				draw();
+			})			
+
 			colorWell.addEventListener('change', function(e) {
 				color = e.target.value;
 			});
